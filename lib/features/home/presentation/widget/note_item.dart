@@ -14,7 +14,7 @@ class NoteItem extends StatelessWidget {
     return Container(
       padding:const EdgeInsets.symmetric(vertical: 30, horizontal: 50),
       decoration: BoxDecoration(
-        color: notes.boxColor,
+        color:AppTheme.pink,
         borderRadius: BorderRadius.circular(10),
 
 
@@ -35,7 +35,7 @@ class NoteItem extends StatelessWidget {
           Row(
             children: [
               Spacer(),
-              Text(DateFormat('dd-MM-yyyy').format(notes.date),style:textTheme.bodyLarge!.copyWith(color: AppTheme.lightDark) ,)
+              Text(DateFormat('dd-MM-yyyy').format(DateTime.now()),style:textTheme.bodyLarge!.copyWith(color: AppTheme.lightDark) ,)
 
             ],
 

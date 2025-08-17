@@ -3,7 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:note_app/features/home/presentation/cubit/toggle_screen_cubit.dart';
 import 'package:note_app/features/home/presentation/screens/have_note_screen.dart';
 import 'package:note_app/features/home/presentation/screens/no_note_screen.dart';
-import 'package:note_app/features/home/presentation/widget/search_icon.dart';
+import 'package:note_app/features/home/presentation/screens/note_screen.dart';
+import 'package:note_app/features/home/presentation/widget/action_icon.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,7 +17,7 @@ static const String routeName = '/home';
       appBar: AppBar(
         title: const Text('Notes'),
         actions:[
-          SearchIcon(onTap: onSearchTaped,)
+          ActionIcon(onTap: onSearchTaped,)
 
 
         ] ,
@@ -38,7 +39,7 @@ static const String routeName = '/home';
           ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          context.read<ToggleScreenCubit>().toggleScreen();
+        Navigator.pushNamed(context, NoteScreen.routeName);
         },
         child: const Icon(Icons.add),
       ),

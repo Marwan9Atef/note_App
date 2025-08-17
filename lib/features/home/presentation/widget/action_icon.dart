@@ -2,9 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:note_app/core/theme/app_theme.dart';
 
 
-class SearchIcon extends StatelessWidget {
-  const SearchIcon({super.key,required this.onTap});
+class ActionIcon extends StatelessWidget {
+  const ActionIcon({super.key,required this.onTap,this.isSearch=true});
 final VoidCallback onTap;
+final bool isSearch;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -18,7 +19,7 @@ final VoidCallback onTap;
           borderRadius: BorderRadius.circular(15)
 
         ),
-        child:Icon(CupertinoIcons.search,
+        child:Icon(isSearch? CupertinoIcons.search: CupertinoIcons.check_mark_circled,
           size: 25,
           color: AppTheme.white,
         ),
