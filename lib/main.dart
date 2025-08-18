@@ -26,7 +26,7 @@ await Hive.openBox(Constant.noteBoxName);
 }
 class NoteApp extends StatelessWidget {
   const NoteApp({super.key});
-
+//test
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
