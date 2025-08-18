@@ -29,7 +29,8 @@ class _NoteScreenState extends State<NoteScreen> {
           ActionIcon(onTap: () {
             if (_formKey.currentState!.validate()) {
               _formKey.currentState!.save();
-              Navigator.pop(context, {'title': title, 'description': description});
+              Navigator.pop(context);
+
             } else {
               setState(() {
                 autovalidateMode = AutovalidateMode.always;
