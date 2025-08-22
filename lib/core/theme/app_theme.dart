@@ -5,6 +5,7 @@ static const Color primary=Color(0xff252525);
 static const Color lightDark=Color(0xff3B3B3B);
 static const Color white=Color(0xffFFFFFF);
 static const Color gray=Color(0xff9A9A9A);
+static const Color red=Color(0xffFF0000);
 static const Color pink=Color(0xffFD99FF);
 static const Color orange=Color(0xffFF9E9E);
 static const Color green=Color(0xff91F48F);
